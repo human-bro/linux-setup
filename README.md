@@ -54,9 +54,18 @@ sudo systemctl start vncserver@1
 > ```
 > sudo systemctl daemon-reload
 > ```
+> ### Then enable the service
+> ```
+> sudo systemctl enable vncserver@1
+> ```
 
 ## Now reboot
 
 ```
 sudo reboot
 ```
+---
+
+# To start ssh with system boot
+
+## > one way --> create ssh file with no extension in the sd card directly in the sd card not inside any folder like overlays doing this will start a ssh server by boot

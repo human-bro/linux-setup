@@ -91,7 +91,7 @@ After=graphical.target
 
 [Service]
 Environment=DISPLAY=:0
-ExecStart=/bin/bash -c '/usr/bin/chromium-browser --no-sandbox --start-fullscreen "https://storingfiles.000.pe/putip.php?ip=$(hostname -I | awk \'{print $1}\')"'
+ExecStart=/bin/bash -c '/usr/bin/chromium-browser --no-sandbox --start-fullscreen "https://somerandomwebsite.com/putip.php?ip=$(hostname -I | awk \'{print $1}\')"'
 Restart=on-failure
 User=pi # here pi is the username of the raspberry pi
 

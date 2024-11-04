@@ -4,3 +4,6 @@
 ---
 
 # Starting a vnc server when the raspberry pi is connected to internet 
+
+``` sudo nano /etc/systemd/system/vncserver@1.service ```
+

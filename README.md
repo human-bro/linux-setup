@@ -3,4 +3,4 @@
 
 ---
 
-<h2> Starting a vnc server when the raspberry pi is connected to internet </h2>
+# Starting a vnc server when the raspberry pi is connected to internet 

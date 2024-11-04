@@ -68,4 +68,10 @@ sudo reboot
 
 # To start ssh with system boot
 
-## > one way --> create ssh file with no extension in the sd card directly in the sd card not inside any folder like overlays doing this will start a ssh server by boot
+> ## create ssh file with no extension in the sd card directly in the sd card not inside any folder like overlays doing this will start a ssh server by boot
+> ## The password is the device password
+
+
+---
+
+

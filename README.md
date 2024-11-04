@@ -74,4 +74,45 @@ sudo reboot
 
 ---
 
+# Setting a Automated script that automatically writes the local ip to a text which can be accessed from anywhere by opening a website in the default browser for ssh or vnc server
+
+## Automatic ip grabber of raspberry pi(it opens a website with ipaddress as the parameter which is stored in a website )
+
+## Create a .service file 
+
+```
+sudo nano /etc/systemd/system/chromium.service
+```
+## Code
+```
+[Unit]
+Description=Start Chromium Browser with dynamic IP at boot
+After=graphical.target
+
+[Service]
+Environment=DISPLAY=:0
+ExecStart=/bin/bash -c '/usr/bin/chromium-browser --no-sandbox --start-fullscreen "https://storingfiles.000.pe/putip.php?ip=$(hostname -I | awk \'{print $1}\')"'
+Restart=on-failure
+User=pi # here pi is the username of the raspberry pi
+
+[Install]
+WantedBy=default.target
+```
+## To enable the service
+```
+sudo systemctl enable chromium.service
+```
+
+## To start the service
+```
+sudo systemctl start chromium.service
+```
+## To see if the service is running or not
+```
+sudo systemctl status chromium.service
+```
+## Reboot the system so that the script is loaded and applied correctly to machine
+```
+sudo reboot
+```
 

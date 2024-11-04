@@ -70,7 +70,7 @@ sudo reboot
 
 > ## create ssh file with no extension in the sd card directly in the sd card not inside any folder like overlays doing this will start a ssh server by boot
 > ## The password is the device password
-
+> ## ssh pi@ip_address
 
 ---
 
